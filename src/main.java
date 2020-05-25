@@ -2,6 +2,8 @@ import command.Toilet;
 import factory.MammalFactory;
 import factory.NemoFactory;
 import singleton.BiomeManager;
+import template.AlionaSwimStroke;
+import template.ArneSwimStroke;
 
 public class main {
 
@@ -23,5 +25,8 @@ class Runner{
             toilet.flush();
         }
         toilet.save();
+
+        new AlionaSwimStroke().swim();
+        new ArneSwimStroke().swim();
     }
 }
