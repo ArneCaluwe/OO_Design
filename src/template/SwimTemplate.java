@@ -6,11 +6,16 @@ public abstract class SwimTemplate  {
     abstract void breath();
     abstract void getOut();
 
+    public int strokesPerBreath(){
+        return 1;
+    }
+
     public void swim(){
         getInWater();
         for (int i = 0; i < 4; i++) {
             stroke();
-            breath();
+            if(i % strokesPerBreath() ==0)
+                breath();
         }
         getOut();
     }
